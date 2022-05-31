@@ -296,6 +296,7 @@ def check_conflicting_targets(
 
 def main() -> None:
     tokenizer = hf.AutoTokenizer.from_pretrained(args.model_name)
+    
     train_set = hfd.load_dataset('super_glue', 'rte', split='train')
     dev_set = hfd.load_dataset('super_glue', 'rte', split='validation')
     diagnostic_set = hfd.load_dataset('hans', split='validation')
